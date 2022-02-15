@@ -6,10 +6,9 @@ import math
 
 
 class BasePage:
-    def __init__(self, browser, url, timeout=15):
+    def __init__(self, browser, url):
         self.browser = browser
         self.url = url
-        # self.browser.implicitly_wait(timeout)
 
     def go_to_basket_page(self):
         basket_link = self.browser.find_element(*BasePageLocators.BASKET_LINK)
